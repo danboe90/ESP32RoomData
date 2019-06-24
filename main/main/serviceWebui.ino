@@ -1,14 +1,37 @@
+
+/**
+ * ------------------------------------------------ LOCAL GLOBALS ------------------------------------------------
+ */
 const char *host = "esp32";
 
+
+
+
+/**
+ * ------------------------------------------------ PROTOTYPES ------------------------------------------------
+ */
 void startPage(AsyncWebServerRequest *request);
 
 
 
+
+
+
+/**
+ *  @brief    This function transmitts index.html stored in the SPIFFS to the requesting client
+ *  @param    request - the request obtained from the client
+ */
 void startPage(AsyncWebServerRequest *request) {
   request->send(SPIFFS, "/index.html", "text/html");
 }
 
 
+
+
+/**
+ *  @brief    This function represents the task in charge of offerening the webui to the clients.
+ *  @param    pvParameter - not in use
+ */
 void serviceWebui(void *pvParameter) {
 
   AsyncWebServer webui(80);
