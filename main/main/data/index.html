@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ESP32 Room-Data Collector</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
+  <style>
+    html {
+      font-family: Helvetica;
+      display: inline-block;
+      margin: 0px auto;
+      text-align: center;
+    }
+    h1{
+      color: #0F3376;
+      padding: 2vh;
+    }
+	.menu{
+		width: 100%;
+		border: 0px solid #33ff33;
+		background-color: #138D90;
+		border-radius: 5px;
+	}
+	.menu-td {
+		width: 20%;		
+		background-color: #17A1A4;	
+		padding: 5px;
+	}
+	.menu_a:link, .menu_a:visited {
+		color: white;		
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;	
+		padding: 14px 25px;	
+		width: 80%;
+		border: 1px solid #138D90;
+		border-radius: 5px;
+	}
+	.menu_a:hover, .menu_a:active {
+		background-color: #19B4B7;
+	}
+  </style>
+  <script>
+	function loadContent(page) {
+		var myRequest = new XMLHttpRequest();
+		myRequest.onreadystatechange = function() {
+			if(this.readyState == 4 && this.status == 200) {
+				document.getElementById("content").innerHTML = this.responseText;
+			}
+		};
+		if(page === 0) { myRequest.open("GET", "/home", true); }				// home page
+		if(page === 1) { myRequest.open("GET", "/roomSettings", true); }		// room settings
+		if(page === 2) { myRequest.open("GET", "/wifiSettings", true); }		// wifiSettings
+		if(page === 3) { myRequest.open("GET", "/loraSettings", true); }		// lora Settings
+		if(page === 4) { myRequest.open("GET", "/btSettings",   true); }		// bluetooth setings
+		myRequest.send();
+	};
+	
+	loadContent(0);
+	
+  </script>
+</head>
+<body>
+  <h1>ESP32 Room-Data Collector</h1>
+  <table class="menu">
+	<tr>
+		<td class="menu-td"><a class="menu_a" id="home"        	onClick="loadContent(0);">Home</a></td>
+		<td class="menu-td"><a class="menu_a" id="roomSettings"	onClick="loadContent(1);">Room Settings</a></td>
+		<td class="menu-td"><a class="menu_a" id="wifiSettings"	onClick="loadContent(2);">WiFi Settings</a></td>
+		<td class="menu-td"><a class="menu_a" id="loraSettings"	onClick="loadContent(3);">LoRa Settings</a></td>
+		<td class="menu-td"><a class="menu_a" id="btSettings"  	onClick="loadContent(4);">Bluetooth Settings</a></td>
+	</tr>
+  </table>
+  <div id="content">
+  </div>
+</body>
+</html>
