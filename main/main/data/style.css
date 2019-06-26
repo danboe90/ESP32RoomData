@@ -50,12 +50,13 @@ html {
 	}
 	
 	.home table tr:nth-child(odd) td {
-		background-color: #eeeefa;
+		background-color: #aaeced
 	}
 	
 	.home table th {
-		background-color: #336;
+		background-color: #17A1A4;
 		color: #ffffff;
+		margin: 2px;
 	}
 	
 	.lora {

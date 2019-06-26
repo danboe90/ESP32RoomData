@@ -8,6 +8,7 @@
   <script>
 	function loadContent(page) {
 		var myRequest = new XMLHttpRequest();
+		
 		myRequest.onreadystatechange = function() {
 			if(this.readyState == 4 && this.status == 200) {
 				document.getElementById("content").innerHTML = this.responseText;
@@ -18,7 +19,7 @@
 		if(page === 2) { myRequest.open("GET", "/wifiSettings", true); }		// wifiSettings
 		if(page === 3) { myRequest.open("GET", "/loraSettings", true); }		// lora Settings
 		if(page === 4) { myRequest.open("GET", "/btSettings",   true); }		// bluetooth setings
-		if(page === 5) { myRequest.open("GET", "/i2cSettings",   true); }		// i2c setings
+		if(page === 5) { myRequest.open("GET", "/i2cSettings",  true); }		// i2c setings
 		myRequest.send();
 	};
 	
