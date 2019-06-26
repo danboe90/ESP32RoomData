@@ -28,7 +28,12 @@ void serviceDisplay(void *pvParameter) {
 }
 
 
-
+/**
+ *  @brief  Wrapper Function for writing to the display
+ *  @param  row - where to start writing
+ *  @param  col - where to start writing
+ *  @param  text - to be written
+ */
 void write2Display(int row, int col, String text) {
-  //u8x8.drawString(row, col, text);
+  //u8x8.drawString(col, row, text);
 }
