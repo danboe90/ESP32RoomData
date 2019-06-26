@@ -57,6 +57,10 @@ void serviceWebui(void *pvParameter) {
     request->send(SPIFFS, "/style.css", "text/css");
   });
 
+  webui.on("/fmw", HTTP_GET, [](AsyncWebServerRequest *request){ 
+    request->send(200, "text/html", fmw_version);
+  });
+
   webui.on("/home", HTTP_GET, [](AsyncWebServerRequest *request){
     request->send(SPIFFS, "/home.html", "text/html");
   });
