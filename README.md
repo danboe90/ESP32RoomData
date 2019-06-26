@@ -19,19 +19,19 @@ The entire Project provides the following functionality:
 
 ## WebUI Location
 
-| Location 		| offers     		| implemented 			|
-| ------------- | ----------------- | --------------------- |
-| /        		| index.html 		| :heavy_check_mark:	|
-| /home    		| home.html  		| :heavy_check_mark:	|
-| /roomSettings | room.html  		| :x:					|
-| /style.css    | room.html  		| :x:		  			|
-| /wifiSettings | wifi.html  		| :x:	 	   			|
-| /loraSettings | lora.html  		| :heavy_check_mark:	|
-| /btSetting    | blue.html  		| :x:		   			|
-| /i2cSetting   | i2c.html   		| :x:		   			|
-| /fmw			| firmware version 	| :heavy_check_mark:	|
-| /host			| assigned IP		| :heavy_check_mark:	|
-| /productCode  | product code		| :heavy_check_mark:	|
+| Location 		| offers     		| file or data exists | implemented 			|
+| ------------- | ----------------- | ------------------- | ----------------------- |
+| /        		| index.html 		| :heavy_check_mark:  | :heavy_check_mark:		|
+| /home    		| home.html  		| :heavy_check_mark:  | :heavy_check_mark:		|
+| /roomSettings | room.html  		| :x:				  | :x:						|
+| /style.css    | style.css  		| :heavy_check_mark:  | :heavy_check_mark:		|
+| /wifiSettings | wifi.html  		| :x:	 	   		  | :x:						|
+| /loraSettings | lora.html  		| :heavy_check_mark:  | :heavy_check_mark:		|
+| /btSetting    | blue.html  		| :x:		   		  | :x:						|
+| /i2cSetting   | i2c.html   		| :x:		   		  | :x:						|
+| /fmw			| firmware version 	| :heavy_check_mark:  | :heavy_check_mark:		|
+| /host			| assigned IP		| :heavy_check_mark:  | :heavy_check_mark:		|
+| /productCode  | product code		| :heavy_check_mark:  | :heavy_check_mark:		|
 
 
 ## Usage
