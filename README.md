@@ -32,6 +32,7 @@ Responses of Webui:
 - [x] Response for /loraSettings
 - [ ] Response for /btSettings
 - [ ] Response for /i2cSettings
+- [x] Response for /style.css
 
 
 ## Usage
