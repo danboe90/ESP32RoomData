@@ -12,6 +12,7 @@
 		var contentRq 	= new XMLHttpRequest();
 		var fwmRq		= new XMLHttpRequest();	
 		var hostRq		= new XMLHttpRequest();
+		var prodCodeRq	= new XMLHttpRequest();
 		
 		
 		contentRq.onreadystatechange = function() {
@@ -29,13 +30,21 @@
 				document.getElementById("host").innerHTML = this.responseText;
 			}
 		};
+		prodCodeRq.onreadystatechange = function() {
+			if(this.readyState == 4 && this.status == 200) {
+				document.getElementById("productCode").innerHTML = this.responseText;
+			}
+		};
 		
-		contentRq.open	("GET", "/home", 	true);
-		fwmRq.open		("GET", "/fmw", 	true);
-		hostRq.open		("GET", "/host", 	true);
+		contentRq.open	("GET", "/home", 			true);
+		fwmRq.open		("GET", "/fmw", 			true);
+		hostRq.open		("GET", "/host", 			true);
+		prodCodeRq.open	("GET", "/productCode", 	true);
+		
 		contentRq.send();
 		fwmRq.send();
 		hostRq.send();
+		prodCodeRq.send();
 	};
 	
 	function loadRoom() {
