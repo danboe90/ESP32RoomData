@@ -10,7 +10,19 @@ Therefore, my Motivation is build on top of the fact, that even, if LoRa is not 
 building-automation, it would be fun to have an LoRa-based smart-home system.
 
 ## Features
+The entire Project provides the following functionality:
+- [x] task for WiFi connectivity 
+- [x] task for providing webui
+- [x] task for display handling
+- [x] task for i2c connectivity
+- [x] task for heartbeat (HelloWorld)
 
+Additional functionality Webui:
+- [ ] Route for /home
+- [ ] Route for /roomSettings
+- [ ] Route for /wifiSettings
+- [ ] Route for /loraSettings
+- [ ] Route for  /btSettings
 
 ## Usage
 
