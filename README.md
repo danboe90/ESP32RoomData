@@ -23,7 +23,7 @@ The entire Project provides the following functionality:
 | ------------- | ----------------- | ------------------- | ----------------------- |
 | /        		| index.html 		| :heavy_check_mark:  | :heavy_check_mark:		|
 | /home    		| home.html  		| :heavy_check_mark:  | :heavy_check_mark:		|
-| /roomSettings | room.html  		| :x:				  | :x:						|
+| /roomSettings | room.html  		| :heavy_check_mark:  | :x:						|
 | /style.css    | style.css  		| :heavy_check_mark:  | :heavy_check_mark:		|
 | /wifiSettings | wifi.html  		| :x:	 	   		  | :x:						|
 | /loraSettings | lora.html  		| :heavy_check_mark:  | :heavy_check_mark:		|
