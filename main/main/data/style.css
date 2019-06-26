@@ -1,28 +1,63 @@
 html {
-  font-family: Helvetica;
-  display: inline-block;
-  margin: 0px auto;
-  text-align: center;
-}
-h1{
-  color: #0F3376;
-  padding: 2vh;
-}
-p{
-  font-size: 1.5rem;
-}
-.button {
-  display: inline-block;
-  background-color: #008CBA;
-  border: none;
-  border-radius: 4px;
-  color: white;
-  padding: 16px 40px;
-  text-decoration: none;
-  font-size: 30px;
-  margin: 2px;
-  cursor: pointer;
-}
-.button2 {
-  background-color: #f44336;
-}
+      font-family: Helvetica;
+      display: inline-block;
+      margin: 0px auto;
+      text-align: center;
+    }
+    h1{
+      color: #0F3376;
+      padding: 2vh;
+    }
+	.menu{
+		width: 100%;
+		border: 0px solid #33ff33;
+		background-color: #138D90;
+		border-radius: 5px;
+	}
+	.menu-td {
+		width: 16%;		
+		background-color: #17A1A4;	
+		padding: 5px;
+	}
+	.menu_a:link, .menu_a:visited {
+		color: white;		
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;	
+		padding: 14px 25px;	
+		width: 80%;
+		border: 1px solid #138D90;
+		border-radius: 5px;
+		cursor: pointer;
+	}
+	.menu_a:hover, .menu_a:active {
+		background-color: #19B4B7;
+		cursor: pointer;
+	}
+	
+	.home {
+		text-align: left;
+		width: 100%;
+	}
+	
+	.home table {
+		width: 50%;
+		border-collapse: collapse;
+	}
+	
+	.home table tr {
+		border-bottom: 1px solid black;
+	}
+	
+	.home table tr:nth-child(odd) td {
+		background-color: #eeeefa;
+	}
+	
+	.home table th {
+		background-color: #336;
+		color: #ffffff;
+	}
+	
+	.lora {
+		text-align: left;
+	}
