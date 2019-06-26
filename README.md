@@ -35,7 +35,17 @@ Responses of Webui:
 - [x] Response for /style.css
 
 
-##WebUI Location
+## WebUI Location
+
+| Location 		| offers     | implemented |
+| ------------- | ---------- | ----------- |
+| /        		| index.html | [o]         |
+| /home    		| home.html  | [o]         |
+| /roomSettings | room.html  | [-]		   |
+| /style.css    | room.html  | [-]		   |
+| /wifiSettings | wifi.html  | [-]		   |
+| /loraSettings | lora.html  | [-]		   |
+
 
 ## Usage
 Download the entire project to your hard-drive and flash the sketch to your HelTec ESP32-LoRa.
