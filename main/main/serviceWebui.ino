@@ -68,6 +68,10 @@ void serviceWebui(void *pvParameter) {
     request->send(SPIFFS, "/index.html", "text/html");                      // TODO: Edit index.html and send other data to client
   });
 
+  webui.on("/i2cSettings", HTTP_GET, [](AsyncWebServerRequest *request){
+    request->send(SPIFFS, "/index.html", "text/html");                      // TODO: Edit index.html and send other data to client
+  });
+
   webui.onNotFound([](AsyncWebServerRequest *request){
     request->send(404);
   });
