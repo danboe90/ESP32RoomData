@@ -23,6 +23,15 @@ Additional functionality Webui:
 - [x] Route for /wifiSettings
 - [x] Route for /loraSettings
 - [x] Route for /btSettings
+- [x] Route for /i2cSettings
+
+- [x] Response for /home
+- [ ] Response for /roomSettings
+- [ ] Response for /wifiSettings
+- [x] Response for /loraSettings
+- [ ] Response for /btSettings
+- [ ] Response for /i2cSettings
+
 
 ## Usage
 Download the entire project to your hard-drive and flash the sketch to your HelTec ESP32-LoRa.
