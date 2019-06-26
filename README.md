@@ -44,7 +44,9 @@ Responses of Webui:
 | /roomSettings | room.html  | :x:					|
 | /style.css    | room.html  | :x:		  			|
 | /wifiSettings | wifi.html  | :x:	 	   			|
-| /loraSettings | lora.html  | :x:		   			|
+| /loraSettings | lora.html  | :heavy_check_mark:	|
+| /btSetting    | blue.html  | :x:		   			|
+| /i2cSetting   | i2c.html   | :x:		   			|
 
 
 ## Usage
