@@ -26,7 +26,9 @@ void startPage(AsyncWebServerRequest *request) {
 }
 
 
-
+/**
+ * ------------------------------------------------ WEBUI TASK ------------------------------------------------
+ */
 
 /**
  *  @brief    This function represents the task in charge of offerening the webui to the clients.
@@ -38,6 +40,10 @@ void serviceWebui(void *pvParameter) {
   Serial.println("[WEBUI] \t starting DNS");
   MDNS.begin(host);
 
+
+  /*
+   * Routes for the webserver
+   */
   webui.on("/", HTTP_GET, [](AsyncWebServerRequest *request){ 
     startPage(request);
   });
@@ -60,6 +66,10 @@ void serviceWebui(void *pvParameter) {
 
   webui.on("/btSettings", HTTP_GET, [](AsyncWebServerRequest *request){
     request->send(SPIFFS, "/index.html", "text/html");                      // TODO: Edit index.html and send other data to client
+  });
+
+  webui.onNotFound([](AsyncWebServerRequest *request){
+    request->send(404);
   });
 
   Serial.println("[WEBUI] \t starting");
