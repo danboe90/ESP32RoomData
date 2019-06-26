@@ -17,24 +17,6 @@ The entire Project provides the following functionality:
 - [x] task for i2c connectivity
 - [x] task for heartbeat (HelloWorld)
 
-Additional functionality Webui:
-- [x] Route for /home
-- [x] Route for /roomSettings
-- [x] Route for /wifiSettings
-- [x] Route for /loraSettings
-- [x] Route for /btSettings
-- [x] Route for /i2cSettings
-
-Responses of Webui:
-- [x] Response for /home
-- [ ] Response for /roomSettings
-- [ ] Response for /wifiSettings
-- [x] Response for /loraSettings
-- [ ] Response for /btSettings
-- [ ] Response for /i2cSettings
-- [x] Response for /style.css
-
-
 ## WebUI Location
 
 | Location 		| offers     		| implemented 			|
