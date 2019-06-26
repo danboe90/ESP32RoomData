@@ -16,6 +16,11 @@ void startPage(AsyncWebServerRequest *request);
 
 
 
+/**
+ * ------------------------------------------------ HELPER FUNCTIONS ------------------------------------------------
+ */
+
+
 
 /**
  *  @brief    This function transmitts index.html stored in the SPIFFS to the requesting client
