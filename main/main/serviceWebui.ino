@@ -60,6 +60,10 @@ void serviceWebui(void *pvParameter) {
   webui.on("/fmw", HTTP_GET, [](AsyncWebServerRequest *request){ 
     request->send(200, "text/html", fmw_version);
   });
+  
+  webui.on("/host", HTTP_GET, [](AsyncWebServerRequest *request){ 
+    request->send(200, "text/html", WiFi.localIP().toString());
+  });
 
   webui.on("/home", HTTP_GET, [](AsyncWebServerRequest *request){
     request->send(SPIFFS, "/home.html", "text/html");
