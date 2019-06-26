@@ -1,5 +1,11 @@
 
 
+
+
+/**
+ *  @brief  This function represents the task in charge of reading all available I2C Sensors
+ *  @param  pvParameter - not in use
+ */
 void serviceI2Sens(void *pvParameter) {
 
   Adafruit_CCS811 ccs;
