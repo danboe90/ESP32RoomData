@@ -31,6 +31,7 @@ The entire Project provides the following functionality:
 | /i2cSetting   | i2c.html   		| :x:		   			|
 | /fmw			| firmware version 	| :heavy_check_mark:	|
 | /host			| assigned IP		| :heavy_check_mark:	|
+| /productCode  | product code		| :heavy_check_mark:	|
 
 
 ## Usage
