@@ -39,12 +39,12 @@ Responses of Webui:
 
 | Location 		| offers     | implemented |
 | ------------- | ---------- | ----------- |
-| /        		| index.html | [x]         |
-| /home    		| home.html  | [x]         |
-| /roomSettings | room.html  | [ ]		   |
-| /style.css    | room.html  | [ ]		   |
-| /wifiSettings | wifi.html  | [ ]		   |
-| /loraSettings | lora.html  | [ ]		   |
+| /        		| index.html | \[x]        |
+| /home    		| home.html  | \[x]        |
+| /roomSettings | room.html  | \[ ]		   |
+| /style.css    | room.html  | \[ ]		   |
+| /wifiSettings | wifi.html  | \[ ]	 	   |
+| /loraSettings | lora.html  | \[ ]		   |
 
 
 ## Usage
