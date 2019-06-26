@@ -28,6 +28,7 @@
  */
 
  const char *fmw_version = "0.0.1";
+ const char *productCode = "HelTec ESP32-LoRa";
 
 /**
  * ------------------------------------------------ PROTOTYPES ------------------------------------------------
