@@ -9,29 +9,20 @@
 void serviceI2Sens(void *pvParameter) {
 
   Adafruit_CCS811 ccs;
-  // Adafruit_BMP280 bmp;
   BME280 bmp;
 
   Serial.println("[I2C-Sensor] \t starting");
 
-
-  if(!ccs.begin()) {
-    Serial.println("[I2C-Sensor] \t not able to start CO2");
-  }
+  if(!ccs.begin()) { Serial.println("[I2C-Sensor] \t not able to start CO2"); }
   else {
-    while(!ccs.available());
-    
+    while(!ccs.available());    
     float temp_cal = ccs.calculateTemperature();
     ccs.setTempOffset(temp_cal - 25.0);
   }
 
-
-
   Wire.begin();
   bmp.setI2CAddress(0x76);
-  if(!bmp.begin()) {
-    Serial.println("[I2C-Sensor] \t not able to start BMP280");
-  }
+  if(!bmp.begin()) { Serial.println("[I2C-Sensor] \t not able to start BMP280"); }
   
   while(1) {
     if(ccs.readData() == 0) {
@@ -66,6 +57,4 @@ void serviceI2Sens(void *pvParameter) {
     Serial.println("------------------------------------------------");
     vTaskDelay(20000/portTICK_RATE_MS);
   }
-
-  
 }
