@@ -37,10 +37,10 @@ Responses of Webui:
 
 ## WebUI Location
 
-| Location 		| offers     | implemented |
-| ------------- | ---------- | ----------- |
-| /        		| index.html | YES         |
-| /home    		| home.html  | YES         |
+| Location 		| offers     | implemented 			|
+| ------------- | ---------- | -------------------- |
+| /        		| index.html | :heavy_check_mark:	|
+| /home    		| home.html  | :heavy_check_mark:	|
 | /roomSettings | room.html  | NO 		   |
 | /style.css    | room.html  | NO		   |
 | /wifiSettings | wifi.html  | NO	 	   |
