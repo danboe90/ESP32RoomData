@@ -68,7 +68,7 @@ void registerWebUILocations(AsyncWebServer *webui) {
   });
 
   webui->on("/roomSettings", HTTP_GET, [](AsyncWebServerRequest *request){
-    request->send(SPIFFS, "/home.html", "text/html");                      // TODO: Edit index.html and send other data to client
+    request->send(SPIFFS, "/room.html", "text/html");                      // TODO: Edit index.html and send other data to client
   });
 
   webui->on("/wifiSettings", HTTP_GET, [](AsyncWebServerRequest *request){

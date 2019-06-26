@@ -57,14 +57,24 @@
 	
 	function loadRoom() {
 		var myRequest = new XMLHttpRequest();
+		var roomIdRq	= new XMLHttpRequest();
 		
 		myRequest.onreadystatechange = function() {
 			if(this.readyState == 4 && this.status == 200) {
 				document.getElementById("content").innerHTML = this.responseText;
 			}
 		};
-		myRequest.open("GET", "/roomSettings", true);
+		roomIdRq.onreadystatechange = function() {
+			if(this.readyState == 4 && this.status == 200) {
+				document.getElementById("room").value = this.responseText;
+			}
+		};
+		
+		myRequest.open	("GET", "/roomSettings", 	true);
+		roomIdRq.open	("GET", "/roomId", 			true);
+		
 		myRequest.send();
+		roomIdRq.send();
 	};
 	
 	function loadWifi() {
