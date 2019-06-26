@@ -18,11 +18,11 @@ The entire Project provides the following functionality:
 - [x] task for heartbeat (HelloWorld)
 
 Additional functionality Webui:
-- [ ] Route for /home
-- [ ] Route for /roomSettings
-- [ ] Route for /wifiSettings
-- [ ] Route for /loraSettings
-- [ ] Route for  /btSettings
+- [x] Route for /home
+- [x] Route for /roomSettings
+- [x] Route for /wifiSettings
+- [x] Route for /loraSettings
+- [x] Route for /btSettings
 
 ## Usage
 Download the entire project to your hard-drive and flash the sketch to your HelTec ESP32-LoRa.
