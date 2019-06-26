@@ -48,6 +48,10 @@ void serviceWebui(void *pvParameter) {
     startPage(request);
   });
 
+  webui.on("/style.css", HTTP_GET, [](AsyncWebServerRequest *request){ 
+    request->send(SPIFFS, "/style.css", "text/css");
+  });
+
   webui.on("/home", HTTP_GET, [](AsyncWebServerRequest *request){
     request->send(SPIFFS, "/home.html", "text/html");
   });
