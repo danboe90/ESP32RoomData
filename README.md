@@ -37,16 +37,17 @@ Responses of Webui:
 
 ## WebUI Location
 
-| Location 		| offers     | implemented 			|
-| ------------- | ---------- | -------------------- |
-| /        		| index.html | :heavy_check_mark:	|
-| /home    		| home.html  | :heavy_check_mark:	|
-| /roomSettings | room.html  | :x:					|
-| /style.css    | room.html  | :x:		  			|
-| /wifiSettings | wifi.html  | :x:	 	   			|
-| /loraSettings | lora.html  | :heavy_check_mark:	|
-| /btSetting    | blue.html  | :x:		   			|
-| /i2cSetting   | i2c.html   | :x:		   			|
+| Location 		| offers     		| implemented 			|
+| ------------- | ----------------- | --------------------- |
+| /        		| index.html 		| :heavy_check_mark:	|
+| /home    		| home.html  		| :heavy_check_mark:	|
+| /roomSettings | room.html  		| :x:					|
+| /style.css    | room.html  		| :x:		  			|
+| /wifiSettings | wifi.html  		| :x:	 	   			|
+| /loraSettings | lora.html  		| :heavy_check_mark:	|
+| /btSetting    | blue.html  		| :x:		   			|
+| /i2cSetting   | i2c.html   		| :x:		   			|
+| /fmw			| firmware version 	| :heavy_check_mark:	|
 
 
 ## Usage
