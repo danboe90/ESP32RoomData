@@ -62,11 +62,11 @@ void serviceWebui(void *pvParameter) {
   });
 
   webui.on("/roomSettings", HTTP_GET, [](AsyncWebServerRequest *request){
-    request->send(SPIFFS, "/index.html", "text/html");                      // TODO: Edit index.html and send other data to client
+    request->send(SPIFFS, "/home.html", "text/html");                      // TODO: Edit index.html and send other data to client
   });
 
   webui.on("/wifiSettings", HTTP_GET, [](AsyncWebServerRequest *request){
-    request->send(SPIFFS, "/index.html", "text/html");                      // TODO: Edit index.html and send other data to client
+    request->send(SPIFFS, "/home.html", "text/html");                      // TODO: Edit index.html and send other data to client
   });
 
   webui.on("/loraSettings", HTTP_GET, [](AsyncWebServerRequest *request){
@@ -74,11 +74,11 @@ void serviceWebui(void *pvParameter) {
   });
 
   webui.on("/btSettings", HTTP_GET, [](AsyncWebServerRequest *request){
-    request->send(SPIFFS, "/index.html", "text/html");                      // TODO: Edit index.html and send other data to client
+    request->send(SPIFFS, "/home.html", "text/html");                      // TODO: Edit index.html and send other data to client
   });
 
   webui.on("/i2cSettings", HTTP_GET, [](AsyncWebServerRequest *request){
-    request->send(SPIFFS, "/index.html", "text/html");                      // TODO: Edit index.html and send other data to client
+    request->send(SPIFFS, "/home.html", "text/html");                      // TODO: Edit index.html and send other data to client
   });
 
   webui.onNotFound([](AsyncWebServerRequest *request){
