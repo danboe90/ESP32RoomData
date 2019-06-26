@@ -25,6 +25,7 @@ Additional functionality Webui:
 - [x] Route for /btSettings
 - [x] Route for /i2cSettings
 
+Responses of Webui:
 - [x] Response for /home
 - [ ] Response for /roomSettings
 - [ ] Response for /wifiSettings
