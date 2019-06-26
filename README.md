@@ -41,10 +41,10 @@ Responses of Webui:
 | ------------- | ---------- | -------------------- |
 | /        		| index.html | :heavy_check_mark:	|
 | /home    		| home.html  | :heavy_check_mark:	|
-| /roomSettings | room.html  | :heavy_uncheck_mark: 		   |
-| /style.css    | room.html  | NO		   |
-| /wifiSettings | wifi.html  | NO	 	   |
-| /loraSettings | lora.html  | NO		   |
+| /roomSettings | room.html  | :x:					|
+| /style.css    | room.html  | :x:		  			|
+| /wifiSettings | wifi.html  | :x:	 	   			|
+| /loraSettings | lora.html  | :x:		   			|
 
 
 ## Usage
