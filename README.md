@@ -25,6 +25,8 @@ Additional functionality Webui:
 - [ ] Route for  /btSettings
 
 ## Usage
+Download the entire project to your hard-drive and flash the sketch to your HelTec ESP32-LoRa.
+Do not forget to upload the data-directory to your SPIFFS.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
