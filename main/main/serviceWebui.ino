@@ -51,6 +51,10 @@ void registerWebUILocations(AsyncWebServer *webui) {
     request->send(200, "text/html", WiFi.localIP().toString());
   });
 
+  webui->on("/roomId", HTTP_GET, [](AsyncWebServerRequest *request){ 
+    request->send(200, "text/html", "Room 123");                      // TODO: edit Room String to send the configured Room ID
+  });
+
   webui->onNotFound([](AsyncWebServerRequest *request){
     request->send(404);
   });
