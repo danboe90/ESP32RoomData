@@ -30,6 +30,7 @@ The entire Project provides the following functionality:
 | /btSetting    | blue.html  		| :x:		   			|
 | /i2cSetting   | i2c.html   		| :x:		   			|
 | /fmw			| firmware version 	| :heavy_check_mark:	|
+| /host			| assigned IP		| :heavy_check_mark:	|
 
 
 ## Usage
