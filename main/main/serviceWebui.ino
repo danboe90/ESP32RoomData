@@ -32,6 +32,59 @@ void startPage(AsyncWebServerRequest *request) {
 
 
 /**
+ *  @brief  This function is in charge of registering new locations in the webui
+ */
+void registerWebUILocations(AsyncWebServer *webui) {
+  webui->on("/", HTTP_GET, [](AsyncWebServerRequest *request){ 
+    startPage(request);
+  });
+
+  webui->on("/fmw", HTTP_GET, [](AsyncWebServerRequest *request){ 
+    request->send(200, "text/html", fmw_version);
+  });
+
+  webui->on("/productCode", HTTP_GET, [](AsyncWebServerRequest *request){ 
+    request->send(200, "text/html", productCode);
+  });
+  
+  webui->on("/host", HTTP_GET, [](AsyncWebServerRequest *request){ 
+    request->send(200, "text/html", WiFi.localIP().toString());
+  });
+
+  webui->onNotFound([](AsyncWebServerRequest *request){
+    request->send(404);
+  });
+  
+  webui->on("/style.css", HTTP_GET, [](AsyncWebServerRequest *request){ 
+    request->send(SPIFFS, "/style.css", "text/css");
+  });
+
+  webui->on("/home", HTTP_GET, [](AsyncWebServerRequest *request){
+    request->send(SPIFFS, "/home.html", "text/html");
+  });
+
+  webui->on("/roomSettings", HTTP_GET, [](AsyncWebServerRequest *request){
+    request->send(SPIFFS, "/home.html", "text/html");                      // TODO: Edit index.html and send other data to client
+  });
+
+  webui->on("/wifiSettings", HTTP_GET, [](AsyncWebServerRequest *request){
+    request->send(SPIFFS, "/home.html", "text/html");                      // TODO: Edit index.html and send other data to client
+  });
+
+  webui->on("/loraSettings", HTTP_GET, [](AsyncWebServerRequest *request){
+    request->send(SPIFFS, "/lora.html", "text/html");
+  });
+
+  webui->on("/btSettings", HTTP_GET, [](AsyncWebServerRequest *request){
+    request->send(SPIFFS, "/home.html", "text/html");                      // TODO: Edit index.html and send other data to client
+  });
+
+  webui->on("/i2cSettings", HTTP_GET, [](AsyncWebServerRequest *request){
+    request->send(SPIFFS, "/home.html", "text/html");                      // TODO: Edit index.html and send other data to client
+  });
+}
+
+/**
  * ------------------------------------------------ WEBUI TASK ------------------------------------------------
  */
 
@@ -45,53 +98,7 @@ void serviceWebui(void *pvParameter) {
   Serial.println("[WEBUI] \t starting DNS");
   MDNS.begin(host);
 
-
-  /*
-   * Routes for the webserver
-   */
-  webui.on("/", HTTP_GET, [](AsyncWebServerRequest *request){ 
-    startPage(request);
-  });
-
-  webui.on("/style.css", HTTP_GET, [](AsyncWebServerRequest *request){ 
-    request->send(SPIFFS, "/style.css", "text/css");
-  });
-
-  webui.on("/fmw", HTTP_GET, [](AsyncWebServerRequest *request){ 
-    request->send(200, "text/html", fmw_version);
-  });
-  
-  webui.on("/host", HTTP_GET, [](AsyncWebServerRequest *request){ 
-    request->send(200, "text/html", WiFi.localIP().toString());
-  });
-
-  webui.on("/home", HTTP_GET, [](AsyncWebServerRequest *request){
-    request->send(SPIFFS, "/home.html", "text/html");
-  });
-
-  webui.on("/roomSettings", HTTP_GET, [](AsyncWebServerRequest *request){
-    request->send(SPIFFS, "/home.html", "text/html");                      // TODO: Edit index.html and send other data to client
-  });
-
-  webui.on("/wifiSettings", HTTP_GET, [](AsyncWebServerRequest *request){
-    request->send(SPIFFS, "/home.html", "text/html");                      // TODO: Edit index.html and send other data to client
-  });
-
-  webui.on("/loraSettings", HTTP_GET, [](AsyncWebServerRequest *request){
-    request->send(SPIFFS, "/lora.html", "text/html");
-  });
-
-  webui.on("/btSettings", HTTP_GET, [](AsyncWebServerRequest *request){
-    request->send(SPIFFS, "/home.html", "text/html");                      // TODO: Edit index.html and send other data to client
-  });
-
-  webui.on("/i2cSettings", HTTP_GET, [](AsyncWebServerRequest *request){
-    request->send(SPIFFS, "/home.html", "text/html");                      // TODO: Edit index.html and send other data to client
-  });
-
-  webui.onNotFound([](AsyncWebServerRequest *request){
-    request->send(404);
-  });
+  registerWebUILocations(&webui);  
 
   Serial.println("[WEBUI] \t starting");
   webui.begin();
