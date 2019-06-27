@@ -58,6 +58,16 @@ void registerWebUILocations(AsyncWebServer *webui) {
   webui->on("/updateRoom", HTTP_GET, [](AsyncWebServerRequest *request){ 
     
     Serial.println("[WENUI] \t updateRoom Route called");
+    if(request->hasParam("id") && request->hasParam("name")) {
+      String roomId   = request->getParam("id")->value();
+      String roomName = request->getParam("name")->value();
+      Serial.print("[WEBUI] \t roomId: ");
+      Serial.print(roomId);
+      Serial.print(" ");
+      Serial.print("name: ");
+      Serial.println(roomName);
+      
+    }
     // request->read();
     // request->send(200, "text/html", "OK");                      
   });
