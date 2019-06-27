@@ -62,6 +62,10 @@ void registerWebUILocations(AsyncWebServer *webui) {
   webui->on("/style.css", HTTP_GET, [](AsyncWebServerRequest *request){ 
     request->send(SPIFFS, "/style.css", "text/css");
   });
+  
+  webui->on("/esp32JSlib.js", HTTP_GET, [](AsyncWebServerRequest *request){ 
+    request->send(SPIFFS, "/esp32JSlib.js", "text/javascript");
+  });
 
   webui->on("/home", HTTP_GET, [](AsyncWebServerRequest *request){
     request->send(SPIFFS, "/home.html", "text/html");
