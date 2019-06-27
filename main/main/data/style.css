@@ -59,6 +59,10 @@ html {
 		margin: 2px;
 	}
 	
+	.room {
+		text-align: left;
+	}
+	
 	.lora {
 		text-align: left;
 	}
