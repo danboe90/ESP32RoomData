@@ -34,6 +34,7 @@ The entire Project provides the following functionality:
 | /host			| assigned IP		| :heavy_check_mark:  | :heavy_check_mark:		|
 | /productCode  | product code		| :heavy_check_mark:  | :heavy_check_mark:		|
 | /roomId 		| configured roomId	| :heavy_check_mark:  | :heavy_check_mark:		|
+| /updateRoom	| recv Room Data	| :x:  				  | :x:						|
 
 
 ## Usage
