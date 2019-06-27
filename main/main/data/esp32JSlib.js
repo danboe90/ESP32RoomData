@@ -140,10 +140,10 @@
 				// document.getElementById("content").innerHTML = this.responseText;
 			}
 		};
-		myRequest.open("POST", "/updateRoom", true);
+		myRequest.open("GET", "/updateRoom", true);
 		myRequest.setRequestHeader("Content-Type", "application/json");
-		myRequest.setRequestHeader("Content-length", params.length);
-		myRequest.setRequestHeader("Connection", "close");
+		// myRequest.setRequestHeader("Content-length", params.length);
+		// myRequest.setRequestHeader("Connection", "close");
 		console.log(params);
 		myRequest.send(params);
 	};
