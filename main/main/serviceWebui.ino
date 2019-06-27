@@ -55,6 +55,13 @@ void registerWebUILocations(AsyncWebServer *webui) {
     request->send(200, "text/html", "Room 123");                      // TODO: edit Room String to send the configured Room ID
   });
 
+  webui->on("/updateRoom", HTTP_GET, [](AsyncWebServerRequest *request){ 
+    
+    Serial.println("[WENUI] \t updateRoom Route called");
+    // request->read();
+    // request->send(200, "text/html", "OK");                      
+  });
+
   webui->onNotFound([](AsyncWebServerRequest *request){
     request->send(404);
   });
@@ -103,6 +110,7 @@ void registerWebUILocations(AsyncWebServer *webui) {
 void serviceWebui(void *pvParameter) {
 
   AsyncWebServer webui(80);
+  
   Serial.println("[WEBUI] \t starting DNS");
   MDNS.begin(host);
 
