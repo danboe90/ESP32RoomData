@@ -1,19 +1,21 @@
 <div class="room">
 	<h1>Room Settings</h1>
 	
-	<form>
-		<table>
-			<tr>
-				<td>RoomId</td>
-				<td><input id="room"></input></td>
-			</tr>
-			<tr>
-				<td>Room Name</td>
-				<td><input id="roomname"></input></td>
-			</tr>
-			<tr>
-				<td colspan="2"> <input type="submit" value="Submit"> </td>
-			</tr>
-		</table>
-	</form>
+	<table>
+		<tr>
+			<td>RoomId</td>
+			<td><input id="room"></input></td>
+		</tr>
+		<tr>
+			<td>Room Name</td>
+			<td><input id="roomname"></input></td>
+		</tr>
+		<tr>
+			<td colspan="2" id="serverInfo"></td>
+		</tr>
+		<tr>
+			<td colspan="2"> <input type="submit" value="Submit" onClick="updateRoomData();"> </td>
+		</tr>
+	</table>
+
 </div>
