@@ -123,5 +123,28 @@
 		if(page === 3) { loadLora(); }		// lora Settings
 		if(page === 4) { loadBT();   }		// bluetooth setings
 		if(page === 5) { loadI2C();  }		// i2c setings
-		myRequest.send();
 	};
+	
+	
+	function updateRoomData() {
+		
+		var RoomId 		= document.getElementById("room").value;
+		var RoomName 	= document.getElementById("roomname"). value;
+		
+		var params		= JSON.stringify({id: RoomId, name: RoomName})
+		
+		var myRequest = new XMLHttpRequest();
+		
+		myRequest.onreadystatechange = function() {
+			if(this.readyState == 4 && this.status == 200) {
+				// document.getElementById("content").innerHTML = this.responseText;
+			}
+		};
+		myRequest.open("POST", "/updateRoom", true);
+		myRequest.setRequestHeader("Content-Type", "application/json");
+		myRequest.setRequestHeader("Content-length", params.length);
+		myRequest.setRequestHeader("Connection", "close");
+		console.log(params);
+		myRequest.send(params);
+	};
+	
