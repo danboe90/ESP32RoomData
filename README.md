@@ -25,6 +25,7 @@ The entire Project provides the following functionality:
 | /home    		| home.html  		| :heavy_check_mark:  | :heavy_check_mark:		|
 | /roomSettings | room.html  		| :heavy_check_mark:  | :x:						|
 | /style.css    | style.css  		| :heavy_check_mark:  | :heavy_check_mark:		|
+| /esp32JSlib.js| esp32JSlib.js 	| :heavy_check_mark:  | :heavy_check_mark:		|
 | /wifiSettings | wifi.html  		| :x:	 	   		  | :x:						|
 | /loraSettings | lora.html  		| :heavy_check_mark:  | :heavy_check_mark:		|
 | /btSetting    | blue.html  		| :x:		   		  | :x:						|
