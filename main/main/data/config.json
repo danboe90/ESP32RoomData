@@ -1,0 +1,9 @@
+{
+  Room: {
+    id : "",
+    name : ""
+  },
+  Device : {
+    ip : ""
+  }
+}
