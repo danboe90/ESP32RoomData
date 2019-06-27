@@ -44,3 +44,84 @@
 		prodCodeRq.send();
 		roomIdRq.send();
 	};
+	
+	function loadRoom() {
+		var myRequest = new XMLHttpRequest();
+		var roomIdRq	= new XMLHttpRequest();
+		
+		myRequest.onreadystatechange = function() {
+			if(this.readyState == 4 && this.status == 200) {
+				document.getElementById("content").innerHTML = this.responseText;
+			}
+		};
+		roomIdRq.onreadystatechange = function() {
+			if(this.readyState == 4 && this.status == 200) {
+				document.getElementById("room").value = this.responseText;
+			}
+		};
+		
+		myRequest.open	("GET", "/roomSettings", 	true);
+		roomIdRq.open	("GET", "/roomId", 			true);
+		
+		myRequest.send();
+		roomIdRq.send();
+	};
+	
+	function loadWifi() {
+		var myRequest = new XMLHttpRequest();
+		
+		myRequest.onreadystatechange = function() {
+			if(this.readyState == 4 && this.status == 200) {
+				document.getElementById("content").innerHTML = this.responseText;
+			}
+		};
+		myRequest.open("GET", "/wifiSettings", true);
+		myRequest.send();
+	};
+		
+	function loadLora() {
+		var myRequest = new XMLHttpRequest();
+		
+		myRequest.onreadystatechange = function() {
+			if(this.readyState == 4 && this.status == 200) {
+				document.getElementById("content").innerHTML = this.responseText;
+			}
+		};
+		myRequest.open("GET", "/loraSettings", true);
+		myRequest.send();
+	};
+	
+	function loadBT() {
+		var myRequest = new XMLHttpRequest();
+		
+		myRequest.onreadystatechange = function() {
+			if(this.readyState == 4 && this.status == 200) {
+				document.getElementById("content").innerHTML = this.responseText;
+			}
+		};
+		myRequest.open("GET", "/btSettings", true);
+		myRequest.send();
+	};
+	
+	function loadI2C() {
+		var myRequest = new XMLHttpRequest();
+		
+		myRequest.onreadystatechange = function() {
+			if(this.readyState == 4 && this.status == 200) {
+				document.getElementById("content").innerHTML = this.responseText;
+			}
+		};
+		myRequest.open("GET", "/i2cSettings", true);
+		myRequest.send();
+	};
+	
+	function loadContent(page) {
+	
+		if(page === 0) { loadHome(); }		
+		if(page === 1) { loadRoom(); }		// room settings
+		if(page === 2) { loadWifi(); }		// wifiSettings
+		if(page === 3) { loadLora(); }		// lora Settings
+		if(page === 4) { loadBT();   }		// bluetooth setings
+		if(page === 5) { loadI2C();  }		// i2c setings
+		myRequest.send();
+	};
