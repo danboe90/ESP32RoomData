@@ -1,12 +1,16 @@
 
-const char *ssid = "Your-SSID";
-const char *pass = "Your-Password";
+const char *ssid = "CCTVNetwork";
+const char *pass = "raspberry";
 
 
 
+/**
+ *  @brief    This function represents the task of handling WiFi connectivity
+ */
 void serviceWifi(void *pvParameter) {
 
   Serial.println("[WIFI] \t\t attempt connecting");
+  WiFi.setHostname("ESPRoomData");
   WiFi.begin(ssid, pass);
 
   
@@ -18,7 +22,7 @@ void serviceWifi(void *pvParameter) {
   Serial.println(WiFi.localIP());
 
   while(1) {
-    if(WiFi.status() != WL_CONNECTED) {
+    if(WiFi.status() == WL_DISCONNECTED) {
       Serial.println("[WIFI] \t\t reconnect");
       WiFi.disconnect();
       WiFi.mode(WIFI_OFF);
