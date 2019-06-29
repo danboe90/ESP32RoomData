@@ -1,6 +1,6 @@
 
-const char *ssid = "CCTVNetwork";
-const char *pass = "raspberry";
+const char *ssid = "YourSSID";
+const char *pass = "YourPassword";
 
 
 
