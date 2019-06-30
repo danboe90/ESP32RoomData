@@ -124,8 +124,10 @@ void serviceWebui(void *pvParameter) {
   Serial.println("[WEBUI] \t starting DNS");
   MDNS.begin(host);
 
-  registerWebUILocations(&webui);  
 
+  Serial.println("[WEBUI] \t registering locations");
+  registerWebUILocations(&webui);  
+  vTaskDelay(5000/portTICK_RATE_MS);
   Serial.println("[WEBUI] \t starting");
   webui.begin();
 
